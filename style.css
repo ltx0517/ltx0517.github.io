@@ -1,10 +1,10 @@
 /* Default dark theme */
 :root {
-  --bg-color: #121212;
+  --bg-color: #0d0d1a;
   --text-color: #e0e0e0;
-  --accent-color: #64ffda;
-  --nav-bg: #1f1f1f;
-  --link-hover: #90caf9;
+  --accent-color: #bb86fc;
+  --nav-bg: #1a1a2e;
+  --link-hover: #ff79c6;
 }
 
 body {
@@ -75,4 +75,20 @@ body.light-theme {
   --accent-color: #0066cc;
   --nav-bg: #f2f2f2;
   --link-hover: #003366;
+}
+
+body {
+  background-color: #0d0d1a; /* deep space */
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://raw.githubusercontent.com/JulianLaval/canvas-space/master/assets/starfield.png');
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: -1;
 }
