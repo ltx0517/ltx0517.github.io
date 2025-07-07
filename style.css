@@ -1,17 +1,38 @@
-/* General dark theme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #0d1117;
+  --header-bg: #eaeaea;
+  --nav-bg: #f4f4f4;
+  --section-bg: #fefefe;
+  --link-color: #0969da;
+  --button-bg: #0366d6;
+  --button-hover: #218bff;
+}
+
+body.dark {
+  --bg-color: #0d1117;
+  --text-color: #c9d1d9;
+  --header-bg: #161b22;
+  --nav-bg: #21262d;
+  --section-bg: #1c2128;
+  --link-color: #58a6ff;
+  --button-bg: #238636;
+  --button-hover: #2ea043;
+}
+
 body {
-  margin: 2rem auto;
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0d1117;
-  color: #c9d1d9;
-  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 header {
   text-align: center;
   padding: 2rem 1rem;
-  background-color: #161b22;
+  background-color: var(--header-bg);
   border-bottom: 1px solid #30363d;
+  position: relative;
 }
 
 header h1 {
@@ -21,11 +42,21 @@ header h1 {
 
 header p {
   font-size: 1.2rem;
-  color: #8b949e;
+  color: var(--text-color);
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 nav {
-  background-color: #21262d;
+  background-color: var(--nav-bg);
   border-bottom: 1px solid #30363d;
 }
 
@@ -39,19 +70,17 @@ nav ul {
 }
 
 nav a {
-  color: #58a6ff;
+  color: var(--link-color);
   text-decoration: none;
   font-weight: bold;
-}
-
-nav a:hover {
-  color: #79c0ff;
 }
 
 main {
   max-width: 800px;
   margin: auto;
   padding: 2rem 1rem;
+  background-color: var(--section-bg);
+  border-radius: 10px;
 }
 
 section {
@@ -63,14 +92,14 @@ h2 {
   border-bottom: 1px solid #30363d;
   padding-bottom: 0.4rem;
   margin-bottom: 1rem;
-  color: #f0f6fc;
+  color: var(--text-color);
 }
 
 a.button {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.6rem 1.2rem;
-  background-color: #238636;
+  background-color: var(--button-bg);
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -78,14 +107,14 @@ a.button {
 }
 
 a.button:hover {
-  background-color: #2ea043;
+  background-color: var(--button-hover);
 }
 
 footer {
   text-align: center;
   padding: 1.5rem 1rem;
-  background-color: #161b22;
-  color: #8b949e;
+  background-color: var(--header-bg);
+  color: var(--text-color);
   font-size: 0.9rem;
   border-top: 1px solid #30363d;
 }
