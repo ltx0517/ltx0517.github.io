@@ -1,94 +1,62 @@
-/* Default dark theme */
+/* ===== Dark Astronomy Theme ===== */
 :root {
   --bg-color: #0d0d1a;
   --text-color: #e0e0e0;
   --accent-color: #bb86fc;
   --nav-bg: #1a1a2e;
   --link-hover: #ff79c6;
+  --figure-shadow: rgba(255, 255, 255, 0.1);
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  transition: background 0.4s, color 0.4s;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
 header {
-  background-color: var(--nav-bg);
   text-align: center;
   padding: 2rem;
-}
-
-header nav a {
+  background-color: var(--nav-bg);
   color: var(--accent-color);
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-header nav a:hover {
-  color: var(--link-hover);
-}
-
-.theme-toggle {
-  margin-top: 1rem;
-  background-color: transparent;
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.theme-toggle:hover {
-  background-color: var(--accent-color);
-  color: #000;
 }
 
 main {
-  padding: 2rem 10%;
-}
-
-section {
-  margin-bottom: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 h1, h2 {
   font-weight: 700;
+  text-align: center;
+}
+
+figure {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 16px var(--figure-shadow);
+}
+
+figcaption {
+  margin-top: 0.8rem;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #ccc;
 }
 
 footer {
-  background-color: var(--nav-bg);
   text-align: center;
   padding: 1rem;
+  background-color: var(--nav-bg);
   color: #aaa;
-}
-
-/* Light theme toggle */
-body.light-theme {
-  --bg-color: #ffffff;
-  --text-color: #111111;
-  --accent-color: #0066cc;
-  --nav-bg: #f2f2f2;
-  --link-hover: #003366;
-}
-
-body {
-  background-color: #0d0d1a; /* deep space */
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 3px 3px;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: url('Milky Way.jpeg');
-  opacity: 0.1;
-  pointer-events: none;
-  z-index: -1;
 }
