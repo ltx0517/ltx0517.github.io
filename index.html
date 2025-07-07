@@ -7,11 +7,11 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-
-  <!-- Font Awesome -->
+  
+  <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
 
-  <!-- Your CSS -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -25,19 +25,20 @@
       <a href="#publications">Publications</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Theme</button>
   </header>
 
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>I am a researcher focusing on rejuvenating galaxies using IFU spectroscopy...</p>
+      <p>I am a researcher focusing on rejuvenating galaxies using IFU spectroscopy in the local Universe.</p>
     </section>
 
     <section id="research">
       <h2>Research</h2>
       <ul>
-        <li><strong>Galaxy Quenching:</strong> Studying gas inflows in star-forming galaxies.</li>
-        <li><strong>MaNGA Survey:</strong> Spatially resolved spectroscopy of nearby galaxies.</li>
+        <li><strong>Galaxy Quenching:</strong> Investigating gas accretion in post-starburst galaxies.</li>
+        <li><strong>MaNGA Survey:</strong> Studying spatially resolved galaxy evolution.</li>
       </ul>
     </section>
 
@@ -52,7 +53,7 @@
       <h2>Contact</h2>
       <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
       <p>
-        <a href="https://github.com/yourgithub"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://github.com/yourgithub"><i class="fab fa-github"></i> GitHub</a> |
         <a href="https://linkedin.com/in/yourlinkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
       </p>
     </section>
@@ -61,5 +62,11 @@
   <footer>
     <p>&copy; 2025 Your Name. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("light-theme");
+    }
+  </script>
 </body>
 </html>
