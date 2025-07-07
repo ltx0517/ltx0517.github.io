@@ -1,0 +1,78 @@
+/* Default dark theme */
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #64ffda;
+  --nav-bg: #1f1f1f;
+  --link-hover: #90caf9;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.4s, color 0.4s;
+}
+
+header {
+  background-color: var(--nav-bg);
+  text-align: center;
+  padding: 2rem;
+}
+
+header nav a {
+  color: var(--accent-color);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header nav a:hover {
+  color: var(--link-hover);
+}
+
+.theme-toggle {
+  margin-top: 1rem;
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.theme-toggle:hover {
+  background-color: var(--accent-color);
+  color: #000;
+}
+
+main {
+  padding: 2rem 10%;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+footer {
+  background-color: var(--nav-bg);
+  text-align: center;
+  padding: 1rem;
+  color: #aaa;
+}
+
+/* Light theme toggle */
+body.light-theme {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --accent-color: #0066cc;
+  --nav-bg: #f2f2f2;
+  --link-hover: #003366;
+}
