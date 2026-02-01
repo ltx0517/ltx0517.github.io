@@ -285,6 +285,121 @@
                 opacity: 0;
             }
         }
+
+        /* Twinkling stars animation */
+        .star {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: #fff;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+            pointer-events: none;
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Meteor shower animation */
+        .meteor {
+            position: fixed;
+            width: 2px;
+            height: 80px;
+            background: linear-gradient(45deg, transparent, #64b5f6, transparent);
+            animation: meteor 4s infinite linear;
+            pointer-events: none;
+            transform-origin: 0 0;
+        }
+
+        @keyframes meteor {
+            0% {
+                transform: translateX(-100px) translateY(-100px) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(100vw) translateY(100vh) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        /* Pulsing rings animation */
+        .pulse-ring {
+            position: fixed;
+            border: 2px solid rgba(100, 181, 246, 0.3);
+            border-radius: 50%;
+            animation: pulse 6s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Floating bubbles animation */
+        .bubble {
+            position: fixed;
+            border-radius: 50%;
+            background: rgba(100, 181, 246, 0.1);
+            border: 1px solid rgba(100, 181, 246, 0.3);
+            animation: bubble-float 8s infinite linear;
+            pointer-events: none;
+        }
+
+        @keyframes bubble-float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Scanning beam animation */
+        .scan-beam {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 2px;
+            height: 200px;
+            background: linear-gradient(to bottom, transparent, #64b5f6, transparent);
+            transform-origin: center bottom;
+            animation: scan 8s infinite linear;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        @keyframes scan {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body>
@@ -299,9 +414,36 @@
     <div class="particle" style="left: 80%; animation-delay: 1.5s;"></div>
     <div class="particle" style="left: 90%; animation-delay: 2.5s;"></div>
 
+    <!-- Twinkling stars -->
+    <div class="star" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+    <div class="star" style="top: 30%; left: 85%; animation-delay: 1s;"></div>
+    <div class="star" style="top: 50%; left: 25%; animation-delay: 2s;"></div>
+    <div class="star" style="top: 70%; left: 75%; animation-delay: 0.5s;"></div>
+    <div class="star" style="top: 15%; left: 60%; animation-delay: 1.5s;"></div>
+    <div class="star" style="top: 80%; left: 40%; animation-delay: 2.5s;"></div>
+
+    <!-- Meteors -->
+    <div class="meteor" style="top: 10%; left: -50px; animation-delay: 0s;"></div>
+    <div class="meteor" style="top: 30%; left: -50px; animation-delay: 3s;"></div>
+    <div class="meteor" style="top: 60%; left: -50px; animation-delay: 6s;"></div>
+
+    <!-- Pulsing rings -->
+    <div class="pulse-ring" style="top: 25%; left: 20%; width: 20px; height: 20px; animation-delay: 0s;"></div>
+    <div class="pulse-ring" style="top: 60%; left: 70%; width: 30px; height: 30px; animation-delay: 2s;"></div>
+    <div class="pulse-ring" style="top: 80%; left: 15%; width: 25px; height: 25px; animation-delay: 4s;"></div>
+
+    <!-- Floating bubbles -->
+    <div class="bubble" style="left: 15%; width: 20px; height: 20px; animation-delay: 0s;"></div>
+    <div class="bubble" style="left: 35%; width: 15px; height: 15px; animation-delay: 2s;"></div>
+    <div class="bubble" style="left: 65%; width: 25px; height: 25px; animation-delay: 4s;"></div>
+    <div class="bubble" style="left: 85%; width: 18px; height: 18px; animation-delay: 6s;"></div>
+
+    <!-- Scanning beam -->
+    <div class="scan-beam"></div>
+
     <header>
         <nav class="container">
-            <div class="logo">Your Name</div>
+            <div class="logo">Ting-Xuan Li</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -315,7 +457,8 @@
     <main>
         <section id="home" class="hero section">
             <div class="container">
-                <h1>Exploring the Universe</h1>
+                <h1>Beneath Earth's embrace</h1>
+                <h1>Gaze universe's expanse</h1>
                 <p>Research Assistant | Galaxy Evolution | Data-Based Astronomy</p>
                 <a href="#about" class="cta-button">Learn More About Me</a>
             </div>
@@ -325,7 +468,9 @@
             <div class="container">
                 <h2 class="section-title">About Me</h2>
                 <div class="about-content">
-                    <div class="profile-image">🌌</div>
+                    <div class="profile-image">
+                        <img src="ME.jpeg" alt="Profile picture" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
                     <div class="about-text">
                         <p>Welcome to my corner of the universe! I'm a passionate astrophysics student dedicated to understanding the cosmos and its mysteries. My journey in astronomy began with a simple question: "What's out there?" and has evolved into a deep fascination with stellar evolution, exoplanets, and the fundamental forces that shape our universe.</p>
                         <p>Currently pursuing my degree in astrophysics, I'm actively engaged in research projects and constantly seeking new ways to contribute to our understanding of the cosmos. When I'm not studying distant galaxies or analyzing spectroscopic data, you can find me at the local observatory or working on computational simulations.</p>
@@ -339,16 +484,16 @@
                 <h2 class="section-title">Research Interests</h2>
                 <div class="card-grid">
                     <div class="card">
-                        <h3>Stellar Evolution</h3>
-                        <p>Investigating the lifecycle of stars from formation to their final fate as white dwarfs, neutron stars, or black holes. Currently studying stellar nucleosynthesis and its role in cosmic chemical evolution.</p>
+                        <h3>Galaxy Evolution</h3>
+                        <p>How do galaxies evolve across cosmic time? How do galaxies obtain gas that sustains star formation? How is the ecology between gas around galaxies and growth of galaxies?</p>
                     </div>
                     <div class="card">
-                        <h3>Exoplanets</h3>
-                        <p>Exploring methods for detecting and characterizing exoplanets, with a focus on potentially habitable worlds and atmospheric analysis through spectroscopy.</p>
+                        <h3>ML Application on Astrophysics</h3>
+                        <p>I would like to apply machine learning techniques to study this Universe.</p>
                     </div>
                     <div class="card">
-                        <h3>Computational Astrophysics</h3>
-                        <p>Using numerical simulations to model complex astrophysical phenomena, including galaxy formation, stellar dynamics, and gravitational wave sources.</p>
+                        <h3>Astrobiology</h3>
+                        <p>Is there any life in this vast Universe?</p>
                     </div>
                 </div>
             </div>
@@ -367,8 +512,8 @@
                         <p>Studying the rotation curves of spiral galaxies to investigate dark matter distribution and compare with theoretical models.</p>
                     </div>
                     <div class="card">
-                        <h3>Classify the Merger Stage for MaNGA Galaxies</h3>
-                        <p>Developing algorithms for tracking near-Earth asteroids using observational data and orbital mechanics calculations.</p>
+                        <h3>Toward Rejuvenation from JWST</h3>
+                        <p>Finding rejuvenating galaxies toward higher-redshift regime.</p>
                     </div>
                 </div>
 
@@ -376,9 +521,9 @@
                 <div class="skills-grid">
                     <div class="skill-item">Python</div>
                     <div class="skill-item">LaTeX</div>
-                    <div class="skill-item">Observational Astronomy</div>
-                    <div class="skill-item">Data Analysis</div>
+                    <div class="skill-item">Data Analysis and Visualization</div>
                     <div class="skill-item">Spectroscopy</div>
+                    <!-- <div class="skill-item">Spectroscopy</div> -->
                 </div>
             </div>
         </section>
@@ -388,11 +533,11 @@
         <div class="container">
             <div class="social-links">
                 <a href="mailto:tingxuanli2000@gmail.com">Email</a>
-                <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
-                <a href="https://github.com/yourusername">GitHub</a>
-                <a href="https://orcid.org/your-orcid">ORCID</a>
+                <a href="www.linkedin.com/in/tingxuanli2000">LinkedIn</a>
+                <a href="https://github.com/ltx0517">GitHub</a>
+                <a href="https://orcid.org/0009-0002-9423-2373">ORCID</a>
             </div>
-            <p>&copy; 2025 Your Name. All rights reserved. | Reaching for the stars, one equation at a time.</p>
+            <p>&copy; 2026 All rights reserved.</p>
         </div>
     </footer>
 
@@ -436,8 +581,67 @@
             }, 8000);
         }
 
+        // Create dynamic stars
+        function createStar() {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+            document.body.appendChild(star);
+
+            // Remove star after some time
+            setTimeout(() => {
+                star.remove();
+            }, 10000);
+        }
+
+        // Create dynamic meteors
+        function createMeteor() {
+            const meteor = document.createElement('div');
+            meteor.className = 'meteor';
+            meteor.style.top = Math.random() * 50 + '%';
+            meteor.style.left = '-50px';
+            meteor.style.animationDelay = '0s';
+            meteor.style.animationDuration = (Math.random() * 2 + 3) + 's';
+            document.body.appendChild(meteor);
+
+            // Remove meteor after animation
+            setTimeout(() => {
+                meteor.remove();
+            }, 6000);
+        }
+
+        // Create dynamic bubbles
+        function createBubble() {
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            bubble.style.left = Math.random() * 100 + '%';
+            const size = Math.random() * 20 + 10;
+            bubble.style.width = size + 'px';
+            bubble.style.height = size + 'px';
+            bubble.style.animationDelay = '0s';
+            bubble.style.animationDuration = (Math.random() * 4 + 6) + 's';
+            document.body.appendChild(bubble);
+
+            // Remove bubble after animation
+            setTimeout(() => {
+                bubble.remove();
+            }, 10000);
+        }
+
         // Create particles periodically
-        setInterval(createParticle, 3000);
+        setInterval(createParticle, 2000);
+        
+        // Create stars periodically
+        setInterval(createStar, 5000);
+        
+        // Create meteors periodically
+        setInterval(createMeteor, 8000);
+        
+        // Create bubbles periodically
+        setInterval(createBubble, 4000);
     </script>
 </body>
 </html>
